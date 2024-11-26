@@ -6,7 +6,7 @@ import joblib
 from tensorflow.keras.models import load_model
 
 # Cargar los datos
-file_path = '../datos_limpios.csv'  # Cambia esto si tu archivo está en otra ubicación
+file_path = '../Tablero/datos_limpios.csv'  # Cambia esto si tu archivo está en otra ubicación
 datos = pd.read_csv(file_path)
 
 def predecir_puntaje(input_data):
