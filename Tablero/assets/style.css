@@ -1,12 +1,13 @@
-/* Estilo general del cuerpo */
+/* Estilo general */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #000000; /* Fondo completamente negro */
-    color: white; /* Texto blanco */
+    background-color: #000000; /* Fondo negro */
+    color: white;
     margin: 0;
     padding: 0;
 }
 
+/* Estilo de los títulos */
 h1 {
     color: white;
     text-align: center;
@@ -16,62 +17,6 @@ h1 {
 h3 {
     color: white;
     margin-bottom: 10px;
-}
-
-/* Estilo de las pestañas */
-.dash-tabs .tab {
-    background-color: #333333; /* Fondo gris oscuro */
-    color: #ffcc00; /* Texto amarillo */
-    padding: 10px 20px;
-    margin-right: 10px;
-    border-radius: 5px;
-    font-weight: bold;
-    border: 2px solid #555555; /* Bordes grises */
-    cursor: pointer;
-    text-align: center;
-}
-
-.dash-tabs .tab:hover {
-    background-color: #555555; /* Fondo más claro al pasar el mouse */
-    color: #ffffff; /* Texto blanco */
-}
-
-.dash-tabs .tab--selected {
-    background-color: #0066ff; /* Fondo azul para la pestaña activa */
-    color: #ffffff; /* Texto blanco */
-    border: 2px solid #0066ff;
-}
-
-/* Estilo de los menús desplegables */
-.dcc-Dropdown {
-    background-color: #1e1e1e; /* Fondo oscuro */
-    color: #e0e0e0; /* Texto gris claro */
-    border: 1px solid #333333; /* Bordes oscuros */
-    border-radius: 5px;
-}
-
-.dcc-Dropdown .dropdown {
-    background-color: #1e1e1e; /* Fondo oscuro interno */
-    color: #e0e0e0; /* Texto gris claro */
-}
-
-.dcc-Dropdown:hover {
-    border-color: #ffcc00; /* Bordes resaltados al pasar el mouse */
-}
-
-.dcc-Dropdown .dropdown-item {
-    background-color: #1e1e1e; /* Fondo oscuro interno */
-    color: #bfbfbf; /* Texto gris medio */
-}
-
-.dcc-Dropdown .dropdown-item:hover {
-    background-color: #2a2a2a; /* Fondo gris más claro en hover */
-    color: white; /* Texto blanco en hover */
-}
-
-/* Espaciado adicional para gráficos */
-.dcc-Graph {
-    margin-top: 20px;
 }
 
 /* Estilo de los tabs */
@@ -92,29 +37,75 @@ h3 {
     text-align: center;
 }
 
-/* Estilo de los menús desplegables personalizados */
+/* Estilo de los menús desplegables */
 .custom-dropdown {
-    background-color: #1e1e1e !important;
-    color: #5c5a5a !important; /* Texto gris claro para mejor contraste */
+    background-color: #2e2e2e;
+    color: rgb(46, 42, 42);
+    border: 1px solid #444;
     border-radius: 5px;
-    border: 1px solid #007bff !important;
+    padding: 5px;
+    width: 300px;
+    margin-bottom: 15px;
+
+
 }
 
 .custom-dropdown option {
-    background-color: #1e1e1e;
-    color: #d0d0d0; /* Texto gris claro */
+    background-color: #2e2e2e;
+    color: white;
 }
 
 .custom-dropdown:hover {
     background-color: #2a2a2a !important;
 }
 
-.custom-dropdown .dropdown-item {
-    background-color: #1e1e1e;
-    color: #929292; /* Texto gris medio */
+/* Estilo del botón de predicción */
+#btn_predecir {
+    background-color: #ffcc00;
+    border: none;
+    color: black;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.custom-dropdown .dropdown-item:hover {
-    background-color: #2a2a2a;
+#btn_predecir:hover {
+    background-color: #ffaa00;
     color: white;
 }
+
+#output_prediccion {
+    position: absolute;
+    top: 600px; /* Ajusta según el alto deseado */
+    right: 50px; /* Ajusta según la distancia del borde derecho */
+    font-size: 48px;/* Texto más grande */
+    color: #ffcc00; /* Color amarillo para el texto */
+    font-weight: bold; /* Texto en negrita */
+    background-color: #1e1e1e; /* Fondo oscuro */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+    border: 2px solid #ffcc00; /* Borde amarillo */
+    text-align: center; /* Centrar texto */
+    
+}
+
+/* Organizar los menús desplegables en un grid */
+.dropdown-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Espacio entre columnas y filas */
+    margin: 20px 0;
+}
+
+.dropdown-item {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
