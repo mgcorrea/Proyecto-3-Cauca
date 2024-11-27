@@ -6,7 +6,7 @@ import joblib
 from tensorflow.keras.models import load_model
 
 # Cargar los datos
-file_path = '../datos_limpios.csv'  # Cambia esto si tu archivo está en otra ubicación
+file_path = 'Tablero/datos_limpios.csv'  # Cambia esto si tu archivo está en otra ubicación
 datos = pd.read_csv(file_path)
 
 def predecir_puntaje(input_data):
@@ -15,8 +15,8 @@ def predecir_puntaje(input_data):
     utilizando el modelo entrenado con codificación one-hot.
     """
     # Cargar el escalador y el modelo
-    scaler = joblib.load('../Tablero/scaler.pkl')  # Asegúrate de que 'scaler.pkl' esté en la misma ruta
-    modelf = load_model('../Tablero/modelf.keras')  # Asegúrate de que 'modelo.keras' esté en la misma ruta
+    scaler = joblib.load('Tablero/scaler.pkl')  # Asegúrate de que 'scaler.pkl' esté en la misma ruta
+    modelf = load_model('Tablero/modelf.keras')  # Asegúrate de que 'modelo.keras' esté en la misma ruta
     
     # Columnas esperadas por el modelo
     expected_columns = ['COLE_AREA_UBICACION_URBANO', 'COLE_BILINGUE_S',
