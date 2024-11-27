@@ -386,7 +386,7 @@ dcc.Dropdown(
                                     ),
                                     html.Label('FAMI_EDUCACIONPADRE:'),
                                     dcc.Dropdown(
-                                        id='input_fami_educacionmadre',
+                                        id='input_fami_educacionpadre',
                                         options=[
                                             {'label': 'Educación profesional completa', 'value': 'Educación profesional completa'},
                                             {'label': 'Primaria completa', 'value': 'Primaria completa'},
